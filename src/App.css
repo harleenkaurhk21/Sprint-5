@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+}
+
+/* Main Container */
+
+.container {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Search Bar */
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Add Task */
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.add-task select {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.add-task button {
+  padding: 12px 20px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background: #005fd1;
+}
+
+/* Board */
+
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 450px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.empty {
+  text-align: center;
+  color: gray;
+}
+
+/* Task Card */
+
+.task-card {
+  background: #fafafa;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 6px solid #999;
+}
+
+.task-card h3 {
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.task-card input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.priority {
+  margin-bottom: 10px;
+}
+
+.task-card.high {
+  border-left-color: red;
+}
+
+.task-card.medium {
+  border-left-color: orange;
+}
+
+.task-card.low {
+  border-left-color: green;
+}
+
+/* Buttons */
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+  }
+
+  .add-task {
+    flex-direction: column;
+  }
+}
